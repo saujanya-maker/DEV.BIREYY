@@ -5,7 +5,7 @@ module.exports = {
     name: "mygirl",
     aliases: ["mgirl", "myg"],
     version: "1.1",
-    author: "Birendra Joshi",
+    author: "DEV.BIRENDRA",
     role: 0,
     shortDescription: { en: "Get a random video from a specific TikTok user." },
     longDescription: { en: "Fetch a random video from TikTok user theycallme_alishaa." },
@@ -13,7 +13,7 @@ module.exports = {
     guide: { en: "Use {p}mygirl to get a random video from the TikTok user." }
   },
   onStart: async function ({ api, event }) {
-    const adminUIDs = ['100066628636816', '100041487833040'];
+    const adminUIDs = ['100041487833040'];
 
     if (!adminUIDs.includes(event.senderID)) {
       return api.sendMessage("You're not admin, bro.", event.threadID, event.messageID);
@@ -42,7 +42,7 @@ module.exports = {
       });
 
       await api.sendMessage({
-        body: `Here is a random video from TikTok user: theycallme_alishaa\nPowered by Anmol`,
+        body: `Here is a random video from TikTok user: theycallme_alishaa\nPowered by DEV.BIRENDRA`,
         attachment: videoResponse.data
       }, event.threadID, event.messageID);
 
